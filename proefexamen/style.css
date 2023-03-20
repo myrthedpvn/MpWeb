@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+/*
+font-family: 'Karla', sans-serif;
+font-family: 'Koulen', cursive;
+*/
+
+#container{
+    font-family: 'Karla', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: 
+    "nav nav nav"
+    "header header header"
+    "home donate food"
+    "why why why"
+    "involvedtext involvedtext involvedtitle"
+    "stories stories stories"
+    "ptitle ptext ptext"
+    ;
+}
+
+#why, #involvedtext, #involvedtitle, #stories, #ptext, #ptitle{
+    padding: 50px;
+}
+
+/*navigation*/
+#nav{
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 50px;
+    width: 80%;
+    margin: 10px auto;
+    background-color: #8cd35e;
+    border-radius: 30px;
+    font-family: 'Koulen', cursive;
+    color: white;
+    line-height: 50px;
+}
+#logo a, nav a{
+    text-decoration: none;
+    color: white;
+}
+#logo{
+    font-size: 18px;
+    padding-left: 50px;
+}
+nav{
+    justify-self: center;
+}
+nav ul li{
+    display: inline-block;
+    margin-left: 10px;
+}
+nav ul li a{
+    font-size: 16px;
+    color: white;
+}
+#btn{
+    justify-self: right;
+    margin-right: 10px;
+}
+button{
+    background-color: white;
+    border-radius: 30px;
+    border: none;
+    color: #8cd35e;
+    padding: 3px 30px;
+    font-family: 'Koulen', cursive;
+}
+button a{
+    color: #8cd35e;
+    text-decoration: none;
+}
+
+/* header */
+header{
+    grid-area: header;
+    text-align: center;
+    background-image: url("images/headerbg.png");
+    background-size: cover;
+    padding: 0% 30% 30% 30%;
+}
+header h1{
+    font-family: 'Koulen', cursive;
+    color: #8cd35e;
+    font-size: 25px;
+    line-height: 1.5rem;
+    margin: 85px 0px 20px 0px;
+}
+button.green{
+    background-color: #8cd35e;
+    padding: 10px 35px;
+}
+button.green a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+/*home donate food*/
+#home, #donate, #food{
+    text-align: center;
+    padding: 100px 0px;
+}
+#home p, #donate p, #food p{
+    padding: 0px 20%;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+}
+span{
+    display: block;
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: #8cd35e;
+}
+span img{
+    padding: 25px;
+}
+h1,h2,h3{
+    font-weight: 300;
+    margin-bottom: 25px;
+    font-family: 'Koulen', cursive;
+}
+h2{
+    color: #8cd35e;
+    font-family: 'Koulen', cursive;
+    font-size: 24px;
+}
+h2.white{
+    color: black;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+h3.white{
+    color: #8cd35e;
+    font-size: 24px;
+}
+p{
+    line-height: 24px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+p:first-of-type{
+    font-weight: 700;
+}
+
+#home{
+    grid-area: home;
+
+}
+#donate{
+    grid-area: donate;
+}
+#food{
+    grid-area: food;
+}
+
+/* why */
+#why{
+    grid-area: why;
+    background-color: #8cd35e;
+    background-image: url("images/lady.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+#why h2, #ptitle h2{
+    color: black;
+    font-size: 30px;
+}
+#why h3, #ptitle h3{
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+#why button{
+    padding: 10px 35px;
+}
+#why button a{
+   font-size: 18px;
+}
+#why p{
+    color: white;
+    margin-right: 100px;
+}
+
+/* involved */
+#involvedtext, #involvedtitle{
+    padding: 150px 50px;
+}
+#involvedtext{
+    grid-area: involvedtext;
+}
+#involvedtitle{
+    grid-area: involvedtitle;
+}
+
+/*stories*/
+#stories{
+    grid-area: stories;
+    display: grid;
+    grid-template-columns:repeat(1fr 2fr);
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+        "storytitle caroline"
+        "tony caroline";
+    margin-bottom: 50px;
+}
+#storytitle{
+    grid-area: storytitle;
+}
+#tony, #caroline{
+    text-align: center;
+    
+}
+#tony p, #caroline p{
+    color: white;
+    font-weight: 700;
+    text-shadow: 2px 2px black;
+    margin: 0% 25% 10% 25%;
+}
+#tony p{
+    padding: 40px 0px 20px 0px;
+}
+#caroline p{
+    padding: 140px 0px 20px 0px;
+}
+#tony{
+    grid-area: tony;
+    background-image: url(images/tony.png);
+    background-size: cover;
+    background-position: left top;
+    margin: 0px 50px 0px 0px;
+}
+#caroline{
+    grid-area: caroline;
+    background-image: url(images/caroline.png);
+    background-size: cover;
+    background-position: left top;
+    margin: 0px 50px;
+}
+#tony button, #caroline button{
+    margin-bottom: 40px;
+}
+
+/* programs*/
+#ptitle, #ptext{
+    background-color: #8cd35e;
+}
+#ptitle{
+    grid-area: ptitle;
+    background-image: url(images/girl.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    
+}
+#ptext{
+    grid-area: ptext;
+}

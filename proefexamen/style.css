@@ -6,18 +6,18 @@ font-family: 'Koulen', cursive;
 */
 
 #container{
-    font-family: 'Karla', sans-serif;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-areas: 
-    "nav nav nav"
-    "header header header"
-    "home donate food"
-    "why why why"
-    "involvedtext involvedtext involvedtitle"
-    "stories stories stories"
-    "ptitle ptext ptext"
-    ;
+        "nav nav nav"
+        "header header header"
+        "home donate food"
+        "why why why"
+        "involvedtext involvedtext involvedtitle"
+        "stories stories stories"
+        "ptitle ptext ptext"
+        ;
+        font-family: 'Karla', sans-serif;
 }
 
 #why, #involvedtext, #involvedtitle, #stories, #ptext, #ptitle{
@@ -29,6 +29,8 @@ font-family: 'Koulen', cursive;
     grid-area: nav;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas: 
+      "logo nav btn";
     height: 50px;
     width: 80%;
     margin: 10px auto;
@@ -43,10 +45,12 @@ font-family: 'Koulen', cursive;
     color: white;
 }
 #logo{
+    grid-area: logo;
     font-size: 18px;
     padding-left: 50px;
 }
 nav{
+    grid-area: nav;
     justify-self: center;
 }
 nav ul li{
@@ -58,29 +62,60 @@ nav ul li a{
     color: white;
 }
 #btn{
-    justify-self: right;
-    margin-right: 10px;
+    grid-area: btn;
+    justify-self: end;
 }
-button{
+#btn a{
+    text-decoration: none;
+    color: #8cd35e;
+}
+
+#btn button{
+    font-family: Koulen, cursive;
+    color: #8CD35E;
+    border: none;
+    background-color: white;
+    border-radius: 1.875rem;
+    padding: 0.1875rem 1.875rem;
+    margin-right: 0.625rem;
+}
+button.white{
     background-color: white;
     border-radius: 30px;
     border: none;
     color: #8cd35e;
-    padding: 3px 30px;
+    padding: 0.625rem 2.1875rem;
     font-family: 'Koulen', cursive;
+    font-size: 1.125rem;
 }
-button a{
-    color: #8cd35e;
+button.white a{
+    color: inherit;
     text-decoration: none;
+}
+
+button.green{
+    background-color: #8CD35E;
+    color: white;
+    border: none;
+    border-radius: 1.875rem;
+    padding: 0.625rem 2.1875rem;
+    font-family: 'Koulen', cursive;
+    font-size: 1.125rem;
+}
+button.green a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 /* header */
 header{
     grid-area: header;
-    text-align: center;
-    background-image: url("images/headerbg.png");
+    background-image: url('images/headerbg.png');
+    background-repeat: no-repeat;
     background-size: cover;
-    padding: 0% 30% 30% 30%;
+    text-align: center;
+    padding: 0% 30% 25% 30%;
 }
 header h1{
     font-family: 'Koulen', cursive;
@@ -89,22 +124,14 @@ header h1{
     line-height: 1.5rem;
     margin: 85px 0px 20px 0px;
 }
-button.green{
-    background-color: #8cd35e;
-    padding: 10px 35px;
-}
-button.green a{
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-}
+
 /*home donate food*/
 #home, #donate, #food{
     text-align: center;
-    padding: 100px 0px;
+    padding: 60px 0px;
 }
 #home p, #donate p, #food p{
-    padding: 0px 20%;
+    padding: 0% 20%;
     font-size: 16px;
     line-height: 24px;
     font-weight: 300;
@@ -114,12 +141,23 @@ span{
     margin: 20px auto;
     width: 100px;
     height: 100px;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: #8cd35e;
 }
 span img{
     padding: 25px;
 }
+#home{
+    grid-area: home;
+
+}
+#donate{
+    grid-area: donate;
+}
+#food{
+    grid-area: food;
+}
+
 h1,h2,h3{
     font-weight: 300;
     margin-bottom: 25px;
@@ -148,17 +186,6 @@ p:first-of-type{
     font-weight: 700;
 }
 
-#home{
-    grid-area: home;
-
-}
-#donate{
-    grid-area: donate;
-}
-#food{
-    grid-area: food;
-}
-
 /* why */
 #why{
     grid-area: why;
@@ -176,12 +203,7 @@ p:first-of-type{
     font-size: 24px;
     text-transform: uppercase;
 }
-#why button{
-    padding: 10px 35px;
-}
-#why button a{
-   font-size: 18px;
-}
+
 #why p{
     color: white;
     margin-right: 100px;
@@ -189,7 +211,7 @@ p:first-of-type{
 
 /* involved */
 #involvedtext, #involvedtitle{
-    padding: 150px 50px;
+    padding: 80px 20px;
 }
 #involvedtext{
     grid-area: involvedtext;
@@ -207,7 +229,7 @@ p:first-of-type{
     grid-template-areas: 
         "storytitle caroline"
         "tony caroline";
-    margin-bottom: 50px;
+    background-color: #F3F3F3;
 }
 #storytitle{
     grid-area: storytitle;
@@ -245,6 +267,17 @@ p:first-of-type{
 #tony button, #caroline button{
     margin-bottom: 40px;
 }
+#storytitle h2{
+    color: black;
+    font-size: 2rem;
+    margin-bottom: 0.625rem;
+}
+
+#storytitle h3{
+    color: #8CD35E;
+    font-size: 1.5rem;
+    font-family: Koulen, cursive;
+}
 
 /* programs*/
 #ptitle, #ptext{
@@ -252,9 +285,6 @@ p:first-of-type{
 }
 #ptitle{
     grid-area: ptitle;
-    background-image: url(images/girl.png);
-    background-repeat: no-repeat;
-    background-position: left bottom;
     
 }
 #ptext{

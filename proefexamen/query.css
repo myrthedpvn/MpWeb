@@ -50,9 +50,12 @@
     #btn button{
         margin-right: 0rem;
     }
+    button.fund{
+        padding: 5px 20px;
+    }
 
     button.green{
-        padding: 0.625rem 5rem;
+        padding: 8px 80px;
     }
     button.white{
         padding: 0.625rem 5rem;
@@ -60,9 +63,11 @@
 
     /* header */
     #header{
-        padding: 0% 20% 25% 20%;
+        padding: 20% 20% 25% 20%;
     }
-
+    header h1{
+        margin: 55px 0px 10px 0px;
+    }
     /*home donate food*/
     #home, #donate, #food{
         margin: 5px 0px;
@@ -111,7 +116,6 @@
         padding-right: 0rem;
         padding-bottom: 0rem;
     }
-
 
     #tony p, #caroline p{
         color: white;

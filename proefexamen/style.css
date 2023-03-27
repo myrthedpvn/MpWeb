@@ -107,6 +107,20 @@ button.green a{
     text-decoration: none;
     font-size: 18px;
 }
+button.fund{
+    background-color: #8CD35E;
+    color: white;
+    border: none;
+    border-radius: 1.875rem;
+    padding: 0.625rem 2.1875rem;
+    font-family: 'Koulen', cursive;
+    font-size: 1.125rem;
+}
+button.fund a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
 
 /* header */
 header{
@@ -128,7 +142,7 @@ header h1{
 /*home donate food*/
 #home, #donate, #food{
     text-align: center;
-    padding: 60px 0px;
+    padding: 40px 0px;
 }
 #home p, #donate p, #food p{
     padding: 0% 20%;
